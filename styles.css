@@ -1,0 +1,94 @@
+:root {
+    --color-dark: #2b2b2b;
+    --color-more-dark: #1a1a1a;
+    --color-light: #FFFFFF;
+    --color-gray: #B3B3B3;
+    --color-accent: #ff6f61;
+}
+
+body {
+    background: linear-gradient(to bottom right, var(--color-dark), var(--color-more-dark));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-light);
+}
+
+#chat-container {
+    width: 400px;
+    background-color: var(--color-more-dark);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#messages-container {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--color-dark);
+}
+
+.message {
+    background-color: var(--color-more-dark);
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 80%;
+    align-self: flex-start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--color-light);
+}
+
+.message.outgoing {
+    align-self: flex-end;
+    background-color: var(--color-accent);
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#username-input,
+#message-input {
+    padding: 10px;
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--color-more-dark);
+    color: var(--color-light);
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+#send-button:hover {
+    background-color: #b47cb8;
+}
+
+.message-header {
+    font-weight: bold;
+    margin-right: 5px;
+    color: var(--color-gray);
+}
+
+
